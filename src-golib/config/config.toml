@@ -1,0 +1,37 @@
+[app]
+    debug = true
+    name = "test-app"
+    
+[logger]
+    default = "console-log"
+    [[logger.adapter]]
+        name = "app-log"
+        adapter = "file"
+        async = true
+        Level = 7
+        caller = true
+        call_depth = 1
+        option= {filename = "logs/app.log", Hourly = "true", MaxHours = "168"}
+    [[logger.adapter]]
+        name = "access-log"
+        adapter = "file"
+        async = true
+        Level = 7
+        caller = true
+        call_depth = 1
+        option= {filename = "logs/access.log", Hourly = "true", MaxHours = "168"}
+    [[logger.adapter]]
+        name = "error-log"
+        adapter = "file"
+        async = true
+        Level = 7
+        caller = true
+        call_depth = 1
+        option= {filename = "logs/error.log", Hourly = "true", MaxHours = "168"}
+    [[logger.adapter]]
+        name = "console-log"
+        adapter = "console"
+        async = true
+        level = 7
+        caller = true
+        call_depth = 1
