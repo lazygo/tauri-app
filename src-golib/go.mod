@@ -1,6 +1,6 @@
 module github.com/lazygo/client
 
-go 1.17
+go 1.18
 
 require github.com/lazygo/lazygo v0.4.3
 
